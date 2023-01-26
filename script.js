@@ -1,5 +1,5 @@
 document.querySelector('.button').addEventListener('click', showMeals);
-let selectLi = document.querySelector('#ingredients-list li' );
+let selectLi;
 
 function showMeals() {
     
@@ -11,9 +11,10 @@ function showMeals() {
     document.querySelector('.meal-category').innerHTML = `<b>Category:</b> ${meals[random].strCategory}`;
     document.querySelector('.meal-area').innerHTML = `<b>Area:</b> ${meals[random].strArea}`;
     document.querySelector('.meal-tags').innerHTML = `<b>Tags:</b> ${meals[random].strTags}`;
+    document.getElementById('video').setAttribute('src', meals[random].strYoutube);
     removeAllIngredients();
-    meals[random].strIngredient.forEach(ingrediente =>{
-        renderIngredient(ingrediente);
+    meals[random].strIngredient.forEach((ingrediente, index) =>{
+        renderIngredient(ingrediente, meals[random].strMeasure[index]);
     });
     
     //renderIngredient(meals[random]);
@@ -23,13 +24,17 @@ function getRandom() {
     return Math.floor(Math.random() * meals.length);
 }
 
-function renderIngredient(ing){
+function renderIngredient(ing,qtd){
     const ulElement = document.querySelector('#ingredients-list');
     const liElement = document.createElement("li");
     
-    liElement.innerHTML = `${ing}`;
+    liElement.innerHTML = `${ing} - ${qtd}`;
     ulElement.appendChild(liElement);
+    selectLi = document.querySelectorAll('li');
 }
 function removeAllIngredients(){
-    document.getElementById('ingredients-list').removeChild('li');
+    const ulElement = document.querySelector('#ingredients-list');
+    while (ulElement.firstChild){
+        ulElement.removeChild(ulElement.firstChild);
+    }
 }

@@ -53,8 +53,8 @@ body {
     margin-right: 10px;
 }
 .area1-1 .meal-image img{
-    width: 340px;
-    height: 340px;
+    width: 400px;
+    height: 400px;
     margin-bottom: 10px;
 }
 .area1-1 .meal-category,
@@ -84,4 +84,16 @@ body {
 .area2 .video-area h5{
     font-size: 24px;
     margin: 10px 0px;
+}
+.area2 .video-area{
+    margin-bottom: 40px;
+}
+.video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    background-color: #EEE;
+    font-family: Arial, Helvetica, sans-serif;
 }
