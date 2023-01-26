@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #EEE;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 80%;
+}
+.part1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.tittle{
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+.subtittle{
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.button{
+    color: #FFF;
+    background-color: #33C3F0;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #33C3F0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.part2{
+    display: none;
+}
+.area1{
+    display: grid;
+    
+    grid-template-columns: repeat(2,1fr);
+}
+.area1-1{
+    margin-right: 10px;
+}
+.area1-1 .meal-image img{
+    width: 340px;
+    height: 340px;
+    margin-bottom: 10px;
+}
+.area1-1 .meal-category,
+.meal-area,
+.meal-tags{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.area1-1 .meal-ingredients p{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.area1-1 .meal-ingredients li{
+    font-size: 15px;
+    margin-left: 30px;
+    text-transform: capitalize;
+}
+
+.area1-2 .meal-tittle{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.area1-2 .meal-preparation{
+    font-size: 15px;
+}
+
+.area2 .video-area h5{
+    font-size: 24px;
+    margin: 10px 0px;
+}
